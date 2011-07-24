@@ -29,8 +29,10 @@ USE_I18N = True
 
 MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'media/')
 MEDIA_URL = '/media/'
-ADMIN_MEDIA_PREFIX = '/admin_media/'
-FEINCMS_ADMIN_MEDIA = '/feincms_media/'
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static/')
+STATIC_URL = '/static/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+FEINCMS_ADMIN_MEDIA = '/static/feincms/'
 
 SECRET_KEY = '_wn95s-apfd-442cby5m^_^ak6+5(fyn3lvnvtn7!si&o)1x^w'
 
@@ -66,6 +68,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'django.contrib.staticfiles',
 
     'feincms',
     'feincms.module.blog',

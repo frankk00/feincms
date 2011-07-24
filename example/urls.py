@@ -28,3 +28,6 @@ urlpatterns = patterns('',
 
     (r'^', include('feincms.views.cbv.urls')),
 )
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
